@@ -227,6 +227,7 @@ class WC_PIP_Orders_Admin {
 			 */
 			$actions = apply_filters( 'wc_pip_admin_order_actions', array(
 				'wc_pip_print_invoice'           => __( 'Print Invoice', 'woocommerce-pip' ),
+				'wc_pip_print_ci'   => __( 'Print Company Invoice', 'woocommerce-pip' ),
 				'wc_pip_send_email_invoice'      => __( 'Email Invoice', 'woocommerce-pip' ),
 				'wc_pip_print_packing_list'      => __( 'Print Packing List', 'woocommerce-pip' ),
 				'wc_pip_send_email_packing_list' => __( 'Email Packing List', 'woocommerce-pip' ),

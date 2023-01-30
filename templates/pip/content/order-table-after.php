@@ -167,7 +167,7 @@ defined( 'ABSPATH' ) or exit;
 
 					?>
 
-					<?php if ( $document->show_terms_and_conditions() ) : ?>
+					<?php if ( $document->show_terms_and_conditions() && $type != 'ci' ) : ?>
 
 						<?php $terms = $document->get_return_policy(); ?>
 
@@ -181,7 +181,7 @@ defined( 'ABSPATH' ) or exit;
 
 					<hr>
 
-					<?php if ( $document->show_footer() ) : ?>
+					<?php if ( $document->show_footer() && $type != 'ci' ) : ?>
 
 						<?php $footer = $document->get_footer(); ?>
 
@@ -212,11 +212,26 @@ defined( 'ABSPATH' ) or exit;
 					?>
 				</footer>
 
+				</div> <!-- close table wrapper -->
+
 				<?php if ( 'pick-list' !== $type && 'print' ===  $action ) : ?>
 
-					<hr class="separator" />
+					<!-- <hr class="separator" /> -->
 
 				<?php endif; ?>
 
-			</div><!-- .container -->
-			<?php
+				<?php if ($type == 'invoice') : ?>
+
+					<hr class="separator" />
+					<img src="<?php echo plugin_dir_url( __FILE__ ) . 'coupon.png'; ?>" id="coupon"/>;
+
+				<?php endif; ?>
+
+				<?php  if ($type == 'ci'): ?>
+					</div>
+
+		</div><!--Close MainContainer-->
+		<!-- <hr class="separator" /> -->
+		<?php endif; ?>
+
+		

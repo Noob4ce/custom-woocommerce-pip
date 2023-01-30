@@ -50,10 +50,10 @@ defined( 'ABSPATH' ) or exit;
 	}
 
 	body {
-		display: block;
+		display: grid;
 		color: #000000;
-		font: normal <?php echo get_option( 'wc_pip_body_font_size', '12' ); ?>px/130% Verdana, Arial, Helvetica, sans-serif;
-		margin: 8px;
+		font: normal <?php echo get_option( 'wc_pip_body_font_size', '12' ); ?>px/110% Verdana, Arial, Helvetica, sans-serif;
+		margin: 15px;
 		-webkit-print-color-adjust: exact;
 	}
 
@@ -75,7 +75,7 @@ defined( 'ABSPATH' ) or exit;
 
 	h1, h2, h3, h4, h5, h6 {
 		color: <?php echo get_option( 'wc_pip_headings_color', '#000000' ); ?>;
-		line-height: 150%;
+		line-height: 110%;
 	}
 
 	<?php $h_size = (int) get_option( 'wc_pip_heading_font_size', '28' ) + 4; $i = 0; ?>
@@ -135,8 +135,8 @@ defined( 'ABSPATH' ) or exit;
 
 	.container {
 		background: #FFF;
-		margin: 1em auto;
-		padding: 2em;
+		/* margin: 1em auto;
+		padding: 2em; */
 	}
 
 	.container header,
@@ -256,7 +256,7 @@ defined( 'ABSPATH' ) or exit;
 	<?php if ( 1 === (int) get_option( 'wc_pip_return_policy_fine_print' ) ) : ?>
 
 		.terms-and-conditions {
-			font-size: 90%;
+			font-size: 80%;
 			line-height: 120%;
 		}
 
@@ -424,6 +424,58 @@ defined( 'ABSPATH' ) or exit;
 		text-align: right;
 	}
 
+		/**Print Invoice Layout */
+
+		.MainContainer{
+		display: grid;
+		grid-template-columns: 25% 75%;
+		/* grid-template-rows: repeat(2, 70mm);
+		grid-template-columns: repeat(2, 100mm); */
+
+
+	}
+
+	.tittleprint{
+		font-size: 12px;
+		text-decoration: underline;
+		line-height:10px;
+	}
+
+	.h2text{
+		font-size: 11px;
+		line-height:1.6;
+	}
+
+	p{
+		font-size:smaller;
+		line-height:16px;
+	}
+
+	.shippinginfo{
+		/* grid-column: 1 / 3; */
+   		display: flex;
+        flex-direction: column;
+	}
+
+	h3{
+		font-size:12px;
+	}
+
+	.dots{
+		text-align:left;
+	}
+
+	.onorder{
+		font-size:10px;
+		line-height:1.6;
+	}
+
+	blockquote {
+		display: none;
+	}
+
+
+
 
 	/* ============ *
 	 * PRINT STYLES *
@@ -441,17 +493,21 @@ defined( 'ABSPATH' ) or exit;
 		}
 
 		/* Multiple document separators are not printed */
-		body > div.container .separator {
+		/* body > div.container .separator {
 			display: none;
-		}
+		} */
 
 		/* Break pages when printing multiple documents */
 		.container {
-			page-break-after: always;
+			/* page-break-after: always; */
 		}
 		.container:last-child {
 			page-break-after: auto;
 		}
+
+header{
+	page-break-before: always;
+}
 
 		table {
 			page-break-inside: auto;
@@ -490,6 +546,11 @@ defined( 'ABSPATH' ) or exit;
 
 		.hidden-print {
 			display: none !important;
+		}
+
+		#coupon {
+			width: 100vw;
+			height: 100vh;
 		}
 	}
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WooCommerce Print Invoices/Packing Lists
+ * Plugin Name: Custom WooCommerce Print Invoices/Packing Lists
  * Plugin URI: http://www.woocommerce.com/products/print-invoices-packing-lists/
  * Documentation URI: https://docs.woocommerce.com/document/woocommerce-print-invoice-packing-list/
  * Description: Customize and print invoices and packing lists for WooCommerce orders from the WordPress admin

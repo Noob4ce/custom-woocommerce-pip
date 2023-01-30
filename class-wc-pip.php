@@ -142,7 +142,8 @@ class WC_PIP extends Framework\SV_WC_Plugin {
 
 		// invoices
 		require_once( $this->get_plugin_path() . '/src/class-wc-pip-document-invoice.php' );
-
+		// company invoices
+		require_once( $this->get_plugin_path() . '/src/class-wc-pip-document-ci.php' );
 		// packing lists
 		require_once( $this->get_plugin_path() . '/src/class-wc-pip-document-packing-list.php' );
 		require_once( $this->get_plugin_path() . '/src/class-wc-pip-document-pick-list.php' );
@@ -485,6 +486,7 @@ class WC_PIP extends Framework\SV_WC_Plugin {
 		 */
 		return (array) apply_filters( 'wc_pip_document_types', array(
 			'invoice'      => __( 'Invoice', 'woocommerce-pip' ),
+			'ci'   => __( 'Company Invoice', 'woocommerce-pip' ),
 			'packing-list' => __( 'Packing List', 'woocommerce-pip' ),
 			'pick-list'    => __( 'Pick List', 'woocommerce-pip' ),
 		) );

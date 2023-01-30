@@ -41,6 +41,152 @@ defined( 'ABSPATH' ) or exit;
 		?>
 		<div id="order-<?php echo esc_attr( $order_id ); ?>" class="container">
 
+		<?php if ($type == 'ci') : ?> 
+		<div class="container MainContainer">		
+		<!--Invoice Print Template-->
+			<div id="print" class="">
+		
+			<!--PRICE CHECK -->
+				<h1 class="tittleprint">PRICE CHECK</h1>
+				<div>
+					Updated  YES   NO
+					<br>
+					<strong>Your name: </strong>
+					<p>....................</p>
+				</div>	
+				
+		
+				<h2 class="h2text">STOCK >>  YES   NO</h2>
+				 <strong> Cleared for Processing by:<br>Your Name:</strong> 
+				 ...................
+				 <br>
+				 <strong>Date: </strong>
+				 ....................
+				   
+				
+			<!--USA SHIPMENT-->
+				<h1 class="tittleprint"> USA SHIPMENT </h1>
+				
+					Email Verification Response 
+					<br>
+					<strong>Your name: </strong>
+					....................
+					<br>
+					<strong>Date:</strong> 
+					....................
+				
+				
+			<!---ON ORDER-->
+				<h1 class="tittleprint"> ON ORDER </h1>
+				<div class="onorder">
+						Ordered By: ....................
+						<br>
+						Supplier: ....................
+						<br>
+						Email_ / Online _ / Phone_
+						<br>
+						Reps Name: ....................
+						<br>
+						Order Date: ....................
+						<br>
+						Order #: ....................
+						<br>
+						Net: ....................
+				</div>
+		
+			<!--ETA-->
+				<h1 class="tittleprint"> ETA </h1>
+					<div class="ETA">
+							TBA / Stock / Transfer / B.O.
+					</div>
+		
+			<!--ETA UPDATE-->
+				<h1 class="tittleprint"> ETA UPDATE </h1>
+					<div class="ETA update">
+							B.O ETA: ....................
+							<br>
+							Date: ....................
+							<br>
+							Costumer was notified via 
+							<br>
+							Email - / Call - / WOO - 
+							<br>
+							<strong>Your name: </strong>....................
+					</div>
+			<!--Waiting for payment-->
+				<h2 class="tittleprint"> Waiting for Payment</h2>
+					<div class="waitingpayment">
+								Amount: $....................
+								<br>
+								Date Emailed: ....................
+								<br>
+								<strong>
+									Payment Method Requested:
+								</strong>
+								<br>
+								CC - / E-Transfer - / Paypal - 
+								<br>
+								<strong>Your name:</strong> ....................
+					</div>
+			<!---PAYMENT RECEIVED-->
+				<h2 class="tittleprint"> PAYMENT RECEIVED</h2>
+					<div class="receivedpayment">
+									CC - / E-transfer -/ PayPal -
+									<br>
+									Auth: ....................
+									<br>
+									Date: ....................
+									<br>
+									<strong>Your name: </strong>....................
+					</div>	
+
+			<!---Shipping Info-->			
+					<h2 class="tittleprint"> Shipping Information</h2>
+					<div class="onorder">
+					 Weight: ........  lbs -/ kg -
+					 <br>	
+					 Dimension: 
+					 <br>
+					  L  ........ W  ........ H  ....... Inch
+					 <br>
+					</div>
+					<div>
+
+					</div>
+					<div class="onorder">
+					Canada Post ...... Fedex ......  Other ......
+					<br>
+						Regular ___ Expedited ___
+						<br>
+						Tracked Packet ___ 
+						<br>
+						Small Packet ___
+					</div>
+					<div class="onorder">
+					Base Cost: $ ..........
+					<br>
+					Fuel $..........
+					<br>
+					Liability $..........
+					<br>
+					Tax $..........
+					<br>
+					Coverage Amount:..........
+					<span>
+					<br>
+					Total: 
+					<strong>....................</strong>
+					<br>
+					DATE: .................... 
+					<br>
+					PROCESSED By: .................... 
+					</div>			
+				</div>
+		<?php endif; ?>
+
+
+		<div> <!-- main table wrapper start -->
+
 			<header>
 				<?php
 
